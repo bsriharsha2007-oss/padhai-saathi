@@ -75,3 +75,15 @@ PWA_APP_NAME = 'Padhai Saathi'
 PWA_APP_DESCRIPTION = "Your AI Study Buddy"
 PWA_APP_THEME_COLOR = '#4F46E5'
 PWA_APP_BACKGROUND_COLOR = '#ffffff'
+import os
+import dj_database_url
+
+ALLOWED_HOSTS = ['*']
+
+# Railway / Render auto gives DATABASE_URL
+if 'DATABASE_URL' in os.environ:
+    DATABASES['default'] = dj_database_url.parse(os.environ['DATABASE_URL'])
+else:
+    DATABASES['default'] = {'ENGINE': 'django.db.backends.sqlite3', 'NAME': BASE_DIR / 'db.sqlite3'}
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
