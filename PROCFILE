@@ -1,1 +1,1 @@
-"web: gunicorn padhai_saathi.wsgi:application --bind 0.0.0.0:\$PORT"
+web: gunicorn padhai-saathi.wsgi
