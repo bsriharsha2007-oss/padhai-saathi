@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="text-3xl font-semibold mb-6">Welcome, {{ user.username }}!</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <a href="/leaderboard/" class="bg-white p-6 rounded-xl shadow hover:shadow-lg transform hover:-translate-y-1 transition">
+    <h3 class="text-xl font-medium">National Leaderboard</h3>
+  </a>
+  <a href="/flashcards/12/Physics/Electrostatics/" class="bg-white p-6 rounded-xl shadow hover:shadow-lg transform hover:-translate-y-1 transition">
+    <h3 class="text-xl font-medium">Start Flashcards</h3>
+  </a>
+  <a href="/quiz/Electrostatics/" class="bg-white p-6 rounded-xl shadow hover:shadow-lg transform hover:-translate-y-1 transition">
+    <h3 class="text-xl font-medium">Take Quiz</h3>
+  </a>
+</div>
+{% endblock %}
