@@ -1,1 +1,0 @@
-web: gunicorn padhai-saathi.wsgi
